@@ -1,0 +1,17 @@
+astroid==1.4.4
+certifi==2018.1.18
+chardet==3.0.4
+gTTS==1.2.2
+gTTS-token==1.1.1
+idna==2.6
+lazy-object-proxy==1.2.1
+logilab-common==1.1.0
+pyflakes==1.1.0
+pylint==1.5.2
+requests==2.18.4
+six==1.11.0
+urllib3==1.22
+wrapt==1.8.0
+pyTelegramBotAPI
+speech_recognition
+pydub
