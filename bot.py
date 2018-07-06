@@ -67,6 +67,45 @@ def decode(msg):
     except:
         bot.send_message(msg.chat.id, "Whats get something wrong")
 
+#Хуефикатор, давненько сделал, наконец то впихнул в бота
+@bot.message_handler(commands=['hr'], content_types=['text'])
+def hr(msg):
+    a=list(self.rootLayout_In_Input.text.split())
+    m=["а", "о", "е", "ё", "э", "у", "ю", "я", "и"]
+    s={
+        'я':"хуя",
+        'а':"хуя",
+        'о':"хуё",
+        'ё':"хуё",
+        'е':"хуе",
+        'э':"хуе",
+        'у':"хую",
+        'ю':"хую",
+        'и':"хуи"
+    }
+    r=""
+    try:
+        for n in a:
+            if len(n)<4:
+                r+=n+" "
+            elif n[0] in m and n[2] == n[0]:
+                r+=s[n[0]]+n[3::]+" "
+            elif n[0] in m:
+                r+=s[n[0]]+n[1::]+" "
+            elif n[1] in m and n[3] == n[1]:
+                r+=s[n[1]]+n[4::]+" "
+            elif n[1] in m:
+                r+=s[n[1]]+n[2::]+" "
+            elif n[2] in m:
+                r+=s[n[2]]+n[3::]+" "
+            elif n[3] in m:
+                r+=s[n[3]]+n[4::]+" "
+            elif n[-1] in m:
+                r+=s[n[-1]]+n[5::]+" "
+        bot.send_message(msg.chat.id, r)
+    except:
+        bot.send_message(msg.chat.id, "Либо я криворукое чмо, либо ты пидар и юзаешь латиницу")
+
 #По сути это тоже самое, что и "while True:" только оптимизировано под работу с Telegram Api
 if __name__ == '__main__':
     bot.polling(none_stop=True)

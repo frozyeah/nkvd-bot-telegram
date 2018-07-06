@@ -1,8 +1,6 @@
 astroid==1.4.4
 certifi==2018.1.18
 chardet==3.0.4
-gTTS==1.2.2
-gTTS-token==1.1.1
 idna==2.6
 lazy-object-proxy==1.2.1
 logilab-common==1.1.0
