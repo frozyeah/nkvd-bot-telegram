@@ -45,7 +45,7 @@ def decode(msg):
         bot.send_message(msg.chat.id, "Whats get something wrong")
 
 #Хуефикатор, давненько сделал, наконец то впихнул в бота
-@bot.message_handler(commands=['hr'], content_types=['text'])
+@bot.message_handler(commands=['huewords'], content_types=['text'])
 def hr(msg):
     a=list(self.rootLayout_In_Input.text.split())
     m=["а", "о", "е", "ё", "э", "у", "ю", "я", "и"]
