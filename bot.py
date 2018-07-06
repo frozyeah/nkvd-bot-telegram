@@ -10,7 +10,7 @@ bot = telebot.TeleBot(config.token)
 def menu(msg):
     try:
         #Да в коде это выглядит достаточно уродливо
-        bot.send_message(msg.chat.id, "NKVD BOT ver. 0.1.4\n/help - команды\n/huewords <text> - Хуефикатор\n/encode <текст> <ключ шифрования> - шифратор\n/decode <текст> <ключ шифрования> - дешифратор")
+        bot.send_message(msg.chat.id, "NKVD BOT ver. 0.2\n/help - команды\n/huewords <text> - Хуефикатор\n/encode <текст> <ключ шифрования> - шифратор\n/decode <текст> <ключ шифрования> - дешифратор")
     except:
         bot.send_message(msg.chat.id, "Whats get something wrong")
 
@@ -46,8 +46,8 @@ def decode(msg):
 
 #Хуефикатор, давненько сделал, наконец то впихнул в бота
 @bot.message_handler(commands=['huewords'], content_types=['text'])
-def hr(msg):
-    a=list(msg.split())
+def huewords(msg):
+    a=list(msg.text.split())
     m=["а", "о", "е", "ё", "э", "у", "ю", "я", "и"]
     s={
         'я':"хуя",
