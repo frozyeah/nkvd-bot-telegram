@@ -1,11 +1,11 @@
-# NKVD BOT 0.1.4 in Telegram
+# NKVD BOT 0.2 in Telegram
 t.me/nkvd_beta_bot
 
 Commands:
 
 /help - commands
 
-/voice <text> - Google Text to Speech
+/hr - huefikator (RUS ONLY)
 
 /encode <text> <key> - Encoder
 
